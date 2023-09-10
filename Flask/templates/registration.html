@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+
+        <!-- Main CSS File -->
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+     </head>
+    <body>
+        <h2 style="margin-top: 50px;" >Please enter your details to register for assignment submission</h2>
+        <!-- form begins -->
+        <form id="form" action="{{ url_for('register')}}" method="post">
+            <div class="form-control">
+                <label for="name">Name</label><br>
+                <input type="text" name="name" id="name" placeholder="Enter your name"><br>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label><br>
+                <input type="text" name="email" id="email" placeholder="Enter your Email id"><br>
+            </div>
+
+            <div class="form-control">
+                <label for="mobile">Contact</label><br>
+                <input type="text" name="mobile" id="mobile" placeholder="Enter your mobile number"><br>
+            </div>
+
+            <div class="form-control">
+                <label for="course">Course</label><br>
+                <textarea name="course" id="course" ></textarea>
+            </div>
+
+            <div class="form-control">
+                <label for="regno">regno</label><br>
+               <textarea name="regno" id="regno" ></textarea>  
+            </div>
+            <div class="form-control">
+                <label for="role">Role</label><br>
+                <select id="role" name="role">
+                    <option value="0">Faculty</option>
+                    <option value="1">Student</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="pwd">Password</label><br>
+                <input type="password" name="pwd" id="pwd" placeholder="Please set your password"><br>
+            </div>
+
+            <div class="form-control">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+            <div>
+                <p> Already Registered? <a href=" {{url_for('login')}}">Login Here</a></p>
+                
+            </div>
+
+
+        </form>
+        <!-- form end -->
+        <script>
+  </script>
+      </body>
+</html>

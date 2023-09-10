@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faculty Profile</title>
+    <style>
+        body {
+            background-image:url("/static/bg.bng");
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faculty Profile</h1>
+    <form method="POST" action='/'>
+        <p>
+            Name: <input type="text" name="name" required>
+        </p>
+        <p>
+            Qualification: <input type="text" name="qualification" required> <!-- Corrected name attribute -->
+        </p>
+        <p>
+            Contact: <input type="number" name="phone_number" required>
+        </p>
+        <p>
+            Branch: <input type="text" name="branch" required>
+        </p>
+        <p>
+            Specialization: <input type="text" name="specialization" required>
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+
+    <!-- Display the form details below the submit button -->
+    
+    {% if submitted %}
+    <h2>Faculty Details:</h2>
+    <p>Name: {{name}}</p>
+    <p>Qualification: {{qualification}}</p>
+    <p>Contact: {{phone_number}}</p>
+    <p>Branch: {{branch}}</p>
+    <p>Specialization: {{specialization}}</p>
+    {% endif %}
+</body>
+</html>
